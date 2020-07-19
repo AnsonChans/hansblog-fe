@@ -1,14 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Layout, Menu } from 'antd';
+import {useSelector} from 'react-redux'
 const { Header, Content, Footer } = Layout;
 
 export default ({component=null}) => {
+    const selectKey = useSelector((state)=>state.layout.selectKey)
     return (
         <Layout style={{ height: '100%' }}>
             <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
                 <div className="logo" />
-                <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']}>
+                <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']} selectedKeys={selectKey}>
                     <Menu.Item key="1"><Link to="/">首页</Link></Menu.Item>
                     <Menu.Item key="2"><Link to="/timeline">归档</Link></Menu.Item>
                     <Menu.Item key="3"><Link to="/tags">标签</Link></Menu.Item>

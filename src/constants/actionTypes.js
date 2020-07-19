@@ -1,0 +1,1 @@
+export const SET_MENU_KEY = 'SET_MENU_KEY'
