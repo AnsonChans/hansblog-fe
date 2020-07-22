@@ -1,0 +1,36 @@
+.app_header {
+    width: 100%;
+    background: #fff;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+
+    .left {
+        display: flex;
+        align-items: center;
+        .logo{
+            min-width: 200px;
+        }
+        .search_input {
+            border: none;
+
+            &:focus {
+                border: none !important;
+                box-shadow: none !important;
+            }
+        }
+    }
+
+    .right {
+        // flex: 1;
+        display: flex;
+        align-items: center;
+
+        .avatar {
+            margin-left: 30px;
+            ;
+        }
+    }
+}
